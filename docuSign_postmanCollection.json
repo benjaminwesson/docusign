@@ -1,0 +1,222 @@
+{
+	"id": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+	"name": "DocuSign",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "2dcb599f-08eb-2fa2-c610-87faffe9d186",
+			"name": "Account",
+			"description": "",
+			"order": [
+				"ef9a3a07-1aed-6fcd-1f7e-1ae67b7e8b8a",
+				"0e504228-6120-8df3-8b22-3ba9fee534cf",
+				"59c036e5-4d17-78fc-f97d-82fe01c7518c",
+				"fdb88806-5c61-5d1a-3696-92117852476b",
+				"7cc2c233-863c-4b35-f3b4-04082e7ce264"
+			],
+			"owner": "4155",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62"
+		},
+		{
+			"id": "8003ddcf-0c29-aca4-09d0-46df7085caa5",
+			"name": "Envelope",
+			"description": "",
+			"order": [
+				"71d6a282-7f2d-200b-e9b7-7f722f482400",
+				"5d98032e-0b84-0b98-8e7b-de0a4b7e213a"
+			],
+			"owner": "4155"
+		},
+		{
+			"id": "ff947165-9db6-a766-fd37-05af90dc6818",
+			"name": "Login",
+			"description": "",
+			"order": [
+				"d5dbf95a-fb81-9c07-3a33-1ed71a65fde2"
+			],
+			"owner": "4155"
+		}
+	],
+	"timestamp": 1443029471677,
+	"owner": "4155",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "0e504228-6120-8df3-8b22-3ba9fee534cf",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/billing_plan",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443039617005,
+			"name": "View  Billing Plan",
+			"description": "Retrieve Account billing information from **Docu**_Sign_.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": []
+		},
+		{
+			"id": "59c036e5-4d17-78fc-f97d-82fe01c7518c",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/billing_plan",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443039628917,
+			"name": "Update Billing Plan",
+			"description": "Upate **Docu**_Sign_ Account Billing Plan.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"rawModeData": "{\n    \"billingAddress\":{\n        \"address1\": \"billingStreetAddress\",\n        \"city\": \"billingCity\",\n        \"state\": \"billingState\",\n        \"postalCode\": \"billingZipCode\",\n        \"phone\": \"billingPhone\",\n        \"firstName\": \"givenName\",\n        \"lastName\": \"surname\",\n        \"email\": \"email\"\n    },\n    \"creditCardInformation\":{\n        \"cardNumber\": \"number\",\n        \"expirationMonth\": \"month\",\n        \"expirationYear\": \"year\",\n        \"nameOnCard\": \"fullName\",\n        \"address\":{\n            \"address1\": \"creditCardStreetAddress\",\n            \"city\": \"creditCardCity\",\n            \"state\": \"creditCardState\",\n            \"zip\": \"creditCardZipCode\",\n            \"phone\": \"creditCardPhone\",\n        }\n    },\n    \"enableSupport\":\"String content\", \n    \"includedSeats\":\"String content\", \n    \"renewalStatus\": \"string\", \n    \"downgradeReason\": \"string\", \n    \"planInformation\":{\n       \"currencyCode\":\"String content\",\n       \"planFeatureSets\":[\n            {\n                \"currencyFeatureSetPrices\":[\n                    {\n                        \"currencyCode\":\"String content\",\n                        \"currencySymbol\":\"String content\",\n                        \"envelopeFee\":\"String content\",\n                        \"fixedFee\":\"String content\",\n                        \"seatFee\":\"String content\"\n                    }\n                ],\n            \"envelopeFee\":\"String content\",\n            \"featureSetId\":\"String content\",\n            \"fixedFee\":\"String content\",\n            \"isActive\":\"String content\",\n            \"isEnabled\":\"String content\",\n            \"name\":\"String content\",\n            \"seatFee\":\"String content\"\n            }\n        ],\n        \"planId\":\"String content\",\n        \"freeTrialDaysOverride\":\"String content\"\n    },\n    \"referralInformation\": {\n        \"referralCode\": \"string\",\n        \"referrerName\": \"string \",\n        \"advertisementId\": \"string\",\n        \"publisherId\": \"string\",\n        \"shopperId\": \"string\",\n        \"promoCode\": \"string\",\n        \"groupMemberId\": \"string\",\n        \"idType\": \"string\",\n        \"industry\": \"string\"\n    }\n}"
+		},
+		{
+			"id": "5d98032e-0b84-0b98-8e7b-de0a4b7e213a",
+			"headers": "Accept: application/json\nContent-Type: multipart/form-data; boundary=AAA\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/envelopes",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443041405097,
+			"name": "Create Envelope from Document",
+			"description": "Create a **Docu**_Sign_ envelope from a document.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"folder": "8003ddcf-0c29-aca4-09d0-46df7085caa5",
+			"rawModeData": "--AAA \rContent-Type: application/json \rContent-Disposition: form-data\r\r{\r    \"status\":\"sent\",\r    \"emailBlurb\":\"Test Email Body\",\r    \"emailSubject\": \"Test Email Subject – EnvelopeDefFull\",\r    \"documents\": [\r        {\r            \"name\": \"test1.pdf\",\r            \"documentId\":\"1\",\r            \"order\":\"1\"\r        }   \r    ],\r    \"recipients\": {\r        \"signers\": [\r            {\r                \"email\": \"m.rosey@thomasind.com\",\r                \"name\": \"Mike Rosey\",\r                \"recipientId\":\"1\"\r            }\r        ]\r    }\r}   \r\r--AAA\rContent-Type: application/pdf\rContent-Disposition: file; filename=\"test1.pdf\"; documentid=1\r\r<documents removed>\r\r--AAA--"
+		},
+		{
+			"id": "71d6a282-7f2d-200b-e9b7-7f722f482400",
+			"headers": "Accept: application/json\nContent-Type: application/json\nContent-Disposition: form-data\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/envelopes",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443041900403,
+			"name": "Create Envelope from Template",
+			"description": "Create **Docu**_Sign_ envelope from a template.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"rawModeData": "{\r    \"status\": \"sent\",\r    \"emailBlurb\": \"Email Template\",\r    \"emailSubject\": \"Important information from DocuSign\",\r    \"templateId\":\"{{templateId}}\",\r    \"templateRoles\":[\r        {\r            \"email\":\"benjaminwesson@gmail.com\",\r            \"name\":\"Benjamin\",\r            \"roleName\":\"Signer 1\"\r        }\r    ]\r}"
+		},
+		{
+			"id": "7cc2c233-863c-4b35-f3b4-04082e7ce264",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/billing_payments",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443040629671,
+			"name": "Create Payment Transaction",
+			"description": "Creates a  **Docu**_Sign_ billing payment transaction \nfor the specified `accountId` for a `pastDueBalance`.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"rawModeData": "{\r    \"paymentAmount\": \"pastDueBalance\"\r}"
+		},
+		{
+			"id": "d5dbf95a-fb81-9c07-3a33-1ed71a65fde2",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/login_information?api_password=true&include_account_id_guid=true&login_settings=all",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "--data-urlencode",
+					"value": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443037345625,
+			"name": "View Login Information",
+			"description": "Retrieve account information from **Docu**_Sign_ passing \n`userName`, `password` and `integratorKey` in the custom\nX-DocuSign-Authentication header.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"folder": "ff947165-9db6-a766-fd37-05af90dc6818"
+		},
+		{
+			"id": "ef9a3a07-1aed-6fcd-1f7e-1ae67b7e8b8a",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "--data-urlencode",
+					"value": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443037617330,
+			"name": "View  Account  Information",
+			"description": "Retrieve account information from **Docu**_Sign_.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": [],
+			"folder": "2dcb599f-08eb-2fa2-c610-87faffe9d186",
+			"isFromCollection": true,
+			"collectionRequestId": "ef9a3a07-1aed-6fcd-1f7e-1ae67b7e8b8a"
+		},
+		{
+			"id": "fdb88806-5c61-5d1a-3696-92117852476b",
+			"headers": "Accept: application/json\nContent-Type: application/json\nX-DocuSign-Authentication: <DocuSignCredentials><Username>benjaminwesson@gmail.com</Username><Password>2Trabajar!</Password><IntegratorKey>DOCU-5c3549d3-417f-4d28-8df9-afc52c75f19d</IntegratorKey></DocuSignCredentials>\n",
+			"url": "https://{{server}}/restapi/{{apiVersion}}/accounts/{{accountId}}/billing_payments",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1443040396454,
+			"name": "View Payments History",
+			"description": "Retrieve **Docu**_Sign_ payment history \nfor the specified `accountId` for the last 365 days.",
+			"collectionId": "0fbd9eb8-8764-b0a2-56db-64b208613b62",
+			"responses": []
+		}
+	]
+}
